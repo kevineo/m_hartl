@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'
+  resources :users
 
 
 >>>>>>> 9ca549c181a1c8e2ffbbbd2be57244f2dfb53323
