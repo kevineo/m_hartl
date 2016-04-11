@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MHartl</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+      <%= render 'layouts/shim' %>
 </head>
 <body>
+<<<<<<< HEAD
  <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
+=======
+    <%= render 'layouts/header' %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<%= link_to "sample app", '#', id: "logo" %>
+			<nav>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to "Home", '#' %></li>
+					<li><%= link_to "Help", '#' %></li>
+					<li><%= link_to "Log In", '#' %></li>	
+				</ul>
+			</nav>
+	</div>
+	<div class="container-body">
+		<%= yield %>
+	      <%= render 'layouts/footer' %>
+	</div>
+>>>>>>> 9ca549c181a1c8e2ffbbbd2be57244f2dfb53323
 </body>
 </html>
